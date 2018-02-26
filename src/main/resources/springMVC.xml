@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!--启动注解识别-->
+    <context:annotation-config/>
+
+    <!--使Spring支持自动检测组件，如注解的Controller -->
+
+    <context:component-scan base-package="tmall.controller.*">
+        <context:include-filter type="annotation"
+                                expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+    <context:component-scan base-package="tmall.aspect"/>
+    <!--启动AspectJ支持-->
+    <aop:aspectj-autoproxy proxy-target-class="true" />
+    <mvc:annotation-driven />
+
+    <!--开通静态资源的访问-->
+    <mvc:default-servlet-handler />
+
+    <mvc:interceptors>
+        <bean class="tmall.interceptor.AuthInterceptor"/>
+        <bean class="tmall.interceptor.ConfigInterceptor"/>
+        <bean class="tmall.interceptor.CategoryNamesBelowSearchInterceptor"/>
+    </mvc:interceptors>
+
+    <!-- 视图定位 -->
+    <bean
+            class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass"
+                  value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+    <!-- 对上传文件的解析-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+</beans>
