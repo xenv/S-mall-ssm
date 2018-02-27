@@ -4,11 +4,12 @@
 
 ---------------------------
 
-演示（SSM版）：[http://small.ડ.com/][1] ，可自行注册账号，或使用后台查看权限账号 demo 密码 demo （后台入口在网页右上角）
+**演示**：[http://small.ડ.com/][1]  
+可自行注册账号，或使用后台查看权限账号 demo 密码 demo （后台入口在登陆后显示）  
+
 兄弟项目：  
 [SSH版（实现了SSM版95%功能）][3]  
 [Servlet版（实现了SSM版85%功能）][2]  
-
 
 ----------------------------
 
@@ -17,7 +18,7 @@
  * 功能齐全，页面丰富，实现了小商城的大部分功能
  * 前端仿天猫2017页面，基于原生CSS（前台）、Bootstrap（后台）、Jquery、Bootstrap Js构建
  * 本项目为Maven项目，后端使用 Spring 4 + SpringMVC 4 + Mybatis 3.4 + aspectj 1.8
- * 实现了一个*通用mapper*，免写SQL，可进行单表和多表关联查询，自动插入一对多/多对一对象（注解配置关联对象，结合MyBatis Generator）
+ * 实现了一个**通用mapper**，免写SQL，可进行单表和多表关联查询，自动插入一对多/多对一对象（注解配置关联对象，结合MyBatis Generator）
  * 实现了一个 BaseService 类，集成了多条件的查询和增改删操作，普通Service只需写少量代码即可
  * 完全隔离MyBatis Generator生成代码和额外手写代码，以支持可持续化部署，实现了多个MyBatis Generator插件，全部采用软删除
  * 通过拦截器和自定义注解实现了方法级粒度的用户鉴权，不同用户组权限完全隔离
@@ -39,7 +40,7 @@
  
   1. 若使用IDE打开，需按 Maven 文件安装依赖
   2. 若在Tomcat中部署，Maven文件中已经配置好直接在线部署，使用 maven tomcat7:deploy 可直接在线部署 （需先配置好Tomcat）
-  3. 导入数据库small.sql，在 \src\main\resources\applicationContext.xml 中配置数据库
+  3. 导入数据库small.sql，在 \src\main\resources\jdbc.properties 中配置数据库
   4. 默认后台地址 /admin ，账户密码为 admin 123456 ，新建用户在前台注册，需要后台权限需要在数据库的User表的group_列中将该用户的用户组设置为 superAdmin
   5. JDK >= 1.8、数据库 Mysql
 
