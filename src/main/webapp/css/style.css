@@ -248,24 +248,24 @@ section.head-bar .r-menu img{
 }
 section.carousel{
     width: 100%;
-    /*background: #E8E8E8;*/
+    background: #f5f5f5;
     border-top: 1.5px solid #FF0036;
-    height:500px;
+    /*height:500px;*/
 
 }
 section.carousel .carousel-of-product{
     width:930px;
     margin: 0 auto;
-    height:460px;
+    height:360px;
     position: relative;
 }
 section.carousel img.carousel-image{
-    height:460px;
+    height:360px;
 }
 
 section.carousel .m-menu{
     width:200px;
-    height:460px;
+    height:360px;
     position: absolute;
     top:0;
     left:0;
@@ -404,6 +404,13 @@ main.index .end-png{
     }
     section.carousel .carousel-of-product{
         width:1200px;
+        height:460px;
+    }
+    section.carousel img.carousel-image{
+        height:460px;
+    }
+    section.carousel .m-menu{
+        height:460px;
     }
     main.index .products{
         width:1200px;

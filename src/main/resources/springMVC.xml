@@ -41,7 +41,7 @@
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass"
                   value="org.springframework.web.servlet.view.JstlView"/>
-        <property name="prefix" value="/"/>
+        <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
     <!-- 对上传文件的解析-->

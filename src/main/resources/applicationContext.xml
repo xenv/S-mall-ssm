@@ -33,6 +33,7 @@
 
         <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
         <property name="minEvictableIdleTimeMillis" value="300000"/>
+        <!--定义在从数据库获取新连接失败后重复尝试的次数。Default: 30 -->
 
         <property name="validationQuery" value="SELECT 1"/>
         <property name="testWhileIdle" value="true"/>

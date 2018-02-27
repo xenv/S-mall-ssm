@@ -4,7 +4,7 @@
 
 ---------------------------
 
-演示（SSM版）：[搭建中][1]  
+演示（SSM版）：[http://small.ડ.com/][1] ，可自行注册账号，或使用后台查看权限账号 demo 密码 demo （后台入口在网页右上角）
 兄弟项目：  
 [SSH版（实现了SSM版95%功能）][3]  
 [Servlet版（实现了SSM版85%功能）][2]  
@@ -44,6 +44,6 @@
   5. JDK >= 1.8、数据库 Mysql
 
 
-  [1]: http://
+  [1]: http://small.ડ.com
   [2]: https://github.com/xenv/S-mall-servlet
   [3]: https://github.com/xenv/S-mall-ssh
