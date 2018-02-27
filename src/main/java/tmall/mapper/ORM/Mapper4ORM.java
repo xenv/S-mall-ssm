@@ -15,9 +15,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ *  通用 Mapper | 核心，处理一对多，多对一的插入
+ */
+
 @SuppressWarnings("unchecked")
 public class Mapper4ORM {
     Object mapper;
+
     private Class mapperInterface;
 
     private SqlSessionTemplate sqlSessionTemplate;
@@ -74,7 +79,7 @@ public class Mapper4ORM {
      *
      * @param object 被填充的对象
      * @param depth  当前深度
-     * @throws Exception 大量反射异常
+     * @throws Exception 反射异常
      */
     public void fillManyToOneOnReading(Object object, int depth) throws Exception {
         if (object == null) {
@@ -120,7 +125,7 @@ public class Mapper4ORM {
      *
      * @param object 被填充的对象
      * @param depth  当前深度
-     * @throws Exception 大量反射异常
+     * @throws Exception 反射异常
      */
     public void fillOneToManyOnReading(Object object, int depth) throws Exception {
         if (object == null) {
@@ -167,7 +172,7 @@ public class Mapper4ORM {
      * 读取时，处理所有 Enum 的填充
      *
      * @param object 被填充的对象
-     * @throws Exception 大量反射异常
+     * @throws Exception 反射异常
      */
     public void fillEnumOnReading(Object object) throws Exception {
         if (object == null) {
@@ -196,7 +201,7 @@ public class Mapper4ORM {
      * 写入时，处理所有 Enum 的填充
      *
      * @param object 被填充的对象
-     * @throws Exception 大量反射异常
+     * @throws Exception 反射异常
      */
     public void fillEnumOnWriting(Object object) throws Exception {
         if (object == null) {
@@ -224,7 +229,7 @@ public class Mapper4ORM {
      * 写入时，处理所有 ManyToOne 的填充
      *
      * @param object 被填充的对象
-     * @throws Exception 大量反射异常
+     * @throws Exception 反射异常
      */
     public void fillManyToOneOnWriting(Object object) throws Exception {
         if (object == null) {
@@ -255,6 +260,12 @@ public class Mapper4ORM {
         }
     }
 
+    /**
+     * 读取时填充数据，递归调用上面的方法
+     * @param object 对象
+     * @param depth 当前递归深度
+     * @throws Exception 反射异常
+     */
     public void fillOnReading(Object object, int depth) throws Exception {
         if (object == null) {
             return;
@@ -272,12 +283,18 @@ public class Mapper4ORM {
 
     }
 
+    /**
+     * 写入时填充数据，递归调用上面的方法
+     * @param object 对象
+     * @throws Exception 反射异常
+     */
     public void fillOnWriting(Object object) throws Exception {
         if (object == null) {
             return;
         }
         // 处理 Enumerated
         fillEnumOnWriting(object);
+        // 处理 ManyToOne
         fillManyToOneOnWriting(object);
     }
 }

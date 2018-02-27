@@ -1,5 +1,4 @@
 package tmall.aspect;
-
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -14,6 +13,10 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 
+/**
+ * 处理数据校验，配合 自定义注解
+ * 默认所有参数为空，若可以为空则在 参数前 加注解，其他校验未写
+ */
 
 @Aspect
 @Component
@@ -54,9 +57,4 @@ public class VerificationAspect {
             }
         }
     }
-//    @Before("joinPointInAllController()")
-//    public void beforeMethod2(JoinPoint point){
-//        System.out.println("test");
-//    }
-
 }

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  * 根据注解来鉴权，不指定类注解权限为 0（unLogin），不指定方法注解，权限为类注解权限，
  * 指定方法注解会覆盖掉类注解权限
  * 暂时的权限级为 ： unLogin(0) user(1) admin(2) superAdmin(3)
- * 定义 @Auth() 注解，value值为最低权限，低于此权限会被禁止访问
+ * 定义 @Auth() 注解，value值为最低权限的用户组，低于此权限会被禁止访问
  */
 
 public class AuthInterceptor extends HandlerInterceptorAdapter {
@@ -25,6 +25,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
         }
         HandlerMethod handler = (HandlerMethod) o;
         //获取访问页面的权限
+
         //获取方法上的注解
         Auth authInMethod = ((HandlerMethod) handler).getMethodAnnotation(Auth.class);
 

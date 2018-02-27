@@ -8,6 +8,9 @@ import org.mybatis.generator.api.dom.xml.XmlElement;
 
 import java.util.List;
 
+/**
+ * MBG插件 | 使查询支持软删除
+ */
 public class DeleteAtPlugin extends PluginAdapter {
 
     @Override

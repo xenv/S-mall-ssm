@@ -40,55 +40,55 @@ public class Pagination {
     public void setParam(String param) {
         this.param = param;
     }
-    public Pagination(){
+
+    public Pagination() {
         this.start = 0;
         this.count = 5;
     }
-    public Pagination(int start,int count,int total){
+
+    public Pagination(int start, int count, int total) {
         this.start = start;
         this.count = count;
         this.total = total;
     }
 
     /**
-     *
      * @return 总页数
      */
-    public int getTotalPage(){
-        int totalPage = total / count-1;
+    public int getTotalPage() {
+        int totalPage = total / count - 1;
         // 如果total不能被count整除，或者为0，还要把余下的项目放到最后一页
-        if(total % count != 0 || total == 0)
-            totalPage = total/count;
+        if (total % count != 0 || total == 0)
+            totalPage = total / count;
         return totalPage;
     }
 
     /**
-     *
      * @return 最后一页的第一项的页码
      */
-    public int getLastPage(){
+    public int getLastPage() {
         int lastPage;
         //count 5
         //total 50 -> 45
         //total 47 -> 45
         //total 0 -> 0
 
-        if(total % count == 0){
-            lastPage = total-count;
-        }else{
+        if (total % count == 0) {
+            lastPage = total - count;
+        } else {
             lastPage = total - total % count;
         }
         //total < count
-        lastPage = lastPage <0 ? 0: lastPage;
+        lastPage = lastPage < 0 ? 0 : lastPage;
         return lastPage;
     }
 
-    public boolean isHasPrevious(){
+    public boolean isHasPrevious() {
         return start > 0;
     }
 
-    public boolean isHasNext(){
-        return start!=getLastPage();
+    public boolean isHasNext() {
+        return start != getLastPage();
     }
 
 

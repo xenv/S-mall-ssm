@@ -5,6 +5,10 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
+/**
+ *  通用 Mapper | 给 Service 调用的 工厂 函数，会自动加载相应的 mapper，并且交由通用 mapper 处理
+ */
+
 @Component
 public class MapperFactory {
     @Resource

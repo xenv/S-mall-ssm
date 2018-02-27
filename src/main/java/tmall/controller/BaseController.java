@@ -7,6 +7,10 @@ import tmall.util.FileUtil;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ *  BaseController 负责 Autowired 和 错误处理
+ */
+
 public class BaseController {
     @Autowired
     public PropertyService propertyService;

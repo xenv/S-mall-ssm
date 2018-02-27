@@ -1,4 +1,7 @@
 package tmall.util;
+/**
+ * 处理 Controller 中文件保存的问题
+ */
 
 import org.apache.commons.io.FileUtils;
 
@@ -13,6 +16,7 @@ import javax.servlet.ServletContext;
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
+
 @Component
 public class FileUtil implements ServletContextAware {
     @Autowired
@@ -26,12 +30,12 @@ public class FileUtil implements ServletContextAware {
     }
 
     public void saveImg(UploadedImageFile uploadedImageFile, String type, String imgName) throws Exception {
-        Map<String,String> config = configService.map();
-        String relativeFolderPath = config.get("path_"+type+"_img");
-        File imageFolder= new File(servletContext.getRealPath(relativeFolderPath));
-        if(!imageFolder.exists())
+        Map<String, String> config = configService.map();
+        String relativeFolderPath = config.get("path_" + type + "_img");
+        File imageFolder = new File(servletContext.getRealPath(relativeFolderPath));
+        if (!imageFolder.exists())
             imageFolder.mkdirs();
-        File imageFile = new File(imageFolder,imgName);
+        File imageFile = new File(imageFolder, imgName);
         uploadedImageFile.getImage().transferTo(imageFile);
     }
 }

@@ -11,9 +11,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Properties;
 import java.util.Set;
-
+/**
+ * MBG插件 | 使 Mapper 继承 BaseMapper类
+ */
 public class MapperExtendsPlugin extends PluginAdapter {
-    private Set<String> mappers = new HashSet<String>();
+    private Set<String> mappers = new HashSet<>();
 
     @Override
     public void setProperties(Properties properties) {

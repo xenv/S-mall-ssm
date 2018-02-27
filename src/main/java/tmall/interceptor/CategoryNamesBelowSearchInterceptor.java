@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Map;
-
+/**
+ *  加载搜索栏下面的分类列表
+ */
 public class CategoryNamesBelowSearchInterceptor extends HandlerInterceptorAdapter {
     @Autowired
     CategoryService categoryService;

@@ -9,6 +9,10 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * MybatisGenerator 核心
+ */
+
 public class MybatisGenerator {
 
     public static void main(String[] args) throws Exception {

@@ -13,30 +13,34 @@
         http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd">
+
     <!--启动注解识别-->
     <context:annotation-config/>
 
-    <!--使Spring支持自动检测组件，如注解的Controller -->
+    <!--自动检测组件 -->
 
     <context:component-scan base-package="tmall.controller.*">
         <context:include-filter type="annotation"
                                 expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
     <context:component-scan base-package="tmall.aspect"/>
+
     <!--启动AspectJ支持-->
     <aop:aspectj-autoproxy proxy-target-class="true" />
+
+    <!-- 注解驱动 -->
     <mvc:annotation-driven />
 
-    <!--开通静态资源的访问-->
+    <!--静态资源的访问-->
     <mvc:default-servlet-handler />
-
+    <!-- 拦截器 -->
     <mvc:interceptors>
         <bean class="tmall.interceptor.AuthInterceptor"/>
         <bean class="tmall.interceptor.ConfigInterceptor"/>
         <bean class="tmall.interceptor.CategoryNamesBelowSearchInterceptor"/>
     </mvc:interceptors>
 
-    <!-- 视图定位 -->
+    <!-- 定位jsp -->
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass"

@@ -2,6 +2,10 @@ package tmall.mapper.ORM;
 
 import java.util.List;
 
+/**
+ *  通用 Mapper | 对 mapper 的 所有函数进行静态代理，供调用使用
+ */
+
 @SuppressWarnings("unchecked")
 public class Mapper extends Mapper4ORM {
 

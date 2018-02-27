@@ -5,7 +5,7 @@ import java.security.MessageDigest;
 
 public class PasswordUtil {
     /**
-     * 密码不可逆加密，取md5截取(8,24)再算md5
+     * 密码不可逆加密，取 md5截取 [8,24)再算md5
      * @param password 未加密的原始密码
      * @return 加密后的密码
      */

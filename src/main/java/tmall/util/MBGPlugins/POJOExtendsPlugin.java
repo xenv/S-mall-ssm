@@ -8,7 +8,9 @@ import org.mybatis.generator.internal.util.StringUtility;
 
 import java.util.List;
 import java.util.Properties;
-
+/**
+ * MBG插件 | 使 POJO 继承 BasePOJO 类
+ */
 public class POJOExtendsPlugin extends PluginAdapter {
     private String POJO;
 

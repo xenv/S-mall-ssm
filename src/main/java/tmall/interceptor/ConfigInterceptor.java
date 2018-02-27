@@ -8,7 +8,9 @@ import tmall.service.ConfigService;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
-
+/**
+ *  加载设置参数
+ */
 public class ConfigInterceptor extends HandlerInterceptorAdapter {
     @Autowired
     ConfigService configService;

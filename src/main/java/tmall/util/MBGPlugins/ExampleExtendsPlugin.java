@@ -8,7 +8,9 @@ import org.mybatis.generator.internal.util.StringUtility;
 
 import java.util.List;
 import java.util.Properties;
-
+/**
+ * MBG插件 | 使 Example 继承 BaseExample
+ */
 public class ExampleExtendsPlugin extends PluginAdapter {
     private String example;
 
