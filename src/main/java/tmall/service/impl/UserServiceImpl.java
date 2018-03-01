@@ -24,6 +24,6 @@ public class UserServiceImpl extends BaseServiceImpl<UserMapper, UserExample> im
 
     @Override
     public User get(String name, String password) {
-        return (User) getOne("name", name, "password", PasswordUtil.encryptPassword(password));
+        return (User) getOne("name", name, "password", PasswordUtil.encryptPassword(password), "order","id asc");
     }
 }
