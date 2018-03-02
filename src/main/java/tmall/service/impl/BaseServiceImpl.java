@@ -131,6 +131,9 @@ public class BaseServiceImpl<M, E> extends Service4DAOImpl<M, E> implements Base
     @Override
     public BasePOJO get(int id, int depth) throws Exception {
         BasePOJO object = (BasePOJO) mapper.selectByPrimaryKey(id, depth);
+        if (object == null) {
+            throw new NoSuchObjectException("访问的id不存在或已经被删除");
+        }
         return object;
     }
 

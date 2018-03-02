@@ -25,6 +25,17 @@
  * 通过 参数注解 进行方法级**数据校验**，无需额外配置校验类 （通过 AOP 切面实现）
  * 统一的错误处理
   
+  
+讲解文章：  
+  * [小小商城项目概述 —— 需求分析、数据表设计、原型设计、多层结构设计、项目规划][4]
+  * [SSM开发 | 合理配置 mybatis-generator，隔离机器生成代码和额外增加代码][5]
+  * [SSM开发 | 开发自定义插件，使 mybatis-generator 支持软删除][6]
+  * [SSM开发 | 实现 Mybatis 的通用 Mapper，免写 SQL 自动处理关联查询 （类hibernate）（mybatis-generator+自定义插件+自定义注解+静态代理+泛型+反射）][7]
+  * [SSM开发 | 配合Mybatis，通过泛型实现 BaseService ，抽象增改删查方法][8]
+  * [SSM开发 | 配合自定义注解 和 SpringMVC拦截器，实现 方法级粒度 用户鉴权][9]
+  * [SSM开发 | 对 SpringMVC 传入参数 进行参数校验 （使用自定义AOP切面+自定义参数注解）][10]
+  
+  
 功能： 
 
  - [x] 首页、分类页、搜索页、产品页
@@ -48,3 +59,10 @@
   [1]: http://small.ડ.com
   [2]: https://github.com/xenv/S-mall-servlet
   [3]: https://github.com/xenv/S-mall-ssh
+  [4]: http://www.cnblogs.com/bukong/p/small-start.html
+  [5]: http://www.cnblogs.com/bukong/p/mybatis-generator-insulate.html
+  [6]: http://www.cnblogs.com/bukong/p/mybatis-generator-delete-flag.html
+  [7]: http://www.cnblogs.com/bukong/p/mybatis-general-mapper.html
+  [8]: http://www.cnblogs.com/bukong/p/ssm-BaseService.html
+  [9]: http://www.cnblogs.com/bukong/p/ssm-auth.html
+  [10]: http://www.cnblogs.com/bukong/p/ssm-aop-verification.html
