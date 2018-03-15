@@ -26,15 +26,15 @@ public class UserFrontController extends FrontBaseController {
         if(userService.isExist(name)){
             msg = "用户名已存在，无法注册，请重新输入";
         }
+        if (msg != null ) {
+            model.addAttribute("msg",msg);
+            return "register";
+        }
         User user = new User();
         user.setName(name);
         user.setPassword(password);
         user.setGroup(User.Group.user);
         userService.add(user);
-        if (msg != null ) {
-            model.addAttribute("msg",msg);
-            return "register";
-        }
         return "registerSuccess";
     }
     @RequestMapping("login")

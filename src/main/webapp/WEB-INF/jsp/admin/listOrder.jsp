@@ -64,7 +64,7 @@
                             <table class="table table-striped">
                                 <c:forEach items="${o.orderItems}" var="item" varStatus="vs">
                                 <tr>
-                                    <td><img width="40px" height="40px" src="${productImgDir}${item.product.image.path}"></td>
+                                    <td><img width="40px" height="40px" src="../../../${productImgDir}${item.product.image.path}"></td>
                                     <td>${item.product.name}</td>
                                     <td>${item.number}个</td>
                                     <td>单价${item.product.nowPrice}元</td>
