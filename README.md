@@ -59,10 +59,10 @@
   [1]: http://small.ડ.com
   [2]: https://github.com/xenv/S-mall-servlet
   [3]: https://github.com/xenv/S-mall-ssh
-  [4]: http://www.cnblogs.com/bukong/p/small-start.html
-  [5]: http://www.cnblogs.com/bukong/p/mybatis-generator-insulate.html
-  [6]: http://www.cnblogs.com/bukong/p/mybatis-generator-delete-flag.html
-  [7]: http://www.cnblogs.com/bukong/p/mybatis-general-mapper.html
-  [8]: http://www.cnblogs.com/bukong/p/ssm-BaseService.html
-  [9]: http://www.cnblogs.com/bukong/p/ssm-auth.html
-  [10]: http://www.cnblogs.com/bukong/p/ssm-aop-verification.html
+  [4]: https://yuque.com/page/luan.ma/small-start
+  [5]: https://yuque.com/page/luan.ma/mybatis-generator-insulate
+  [6]: https://yuque.com/page/luan.ma/mybatis-generator-delete-flag
+  [7]: https://yuque.com/page/luan.ma/mybatis-general-mapper
+  [8]: https://yuque.com/page/luan.ma/ssm-BaseService
+  [9]: https://yuque.com/page/luan.ma/ssm-auth
+  [10]: https://yuque.com/page/luan.ma/ssm-aop-verification
