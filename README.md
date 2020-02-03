@@ -54,6 +54,10 @@
   3. 导入数据库small.sql，在 \src\main\resources\jdbc.properties 中配置数据库
   4. 默认后台地址 /admin ，账户密码为 admin 123456 ，新建用户在前台注册，需要后台权限需要在数据库的User表的group_列中将该用户的用户组设置为 superAdmin
   5. JDK >= 1.8、数据库 Mysql
+  
+  *特别注意*：
+  1. 程序只能配置在根目录访问，如 localhost/，不能部署在子文件夹
+  2. small.sql 只有数据库结构和 admin 账户密码，没有其他数据。需要自行登录后，在后台手动添加。演示网站的所有数据均为我后台添加，无需手动插入数据库。
 
 
   [1]: https://small.ડ.com
