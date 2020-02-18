@@ -46,7 +46,7 @@ public class OrderFrontController extends FrontBaseController {
         }
 
         cartItem.setNumber(num);
-        cartItem.setSum(product.getNowPrice().subtract(new BigDecimal(num)));
+        cartItem.setSum(product.getNowPrice().multiply(new BigDecimal(num)));
 
         if (isInDB) {
             cartItemService.update(cartItem);
@@ -76,7 +76,7 @@ public class OrderFrontController extends FrontBaseController {
         if (cartItemFromDB.getProduct().getStock() >= num) {
             cartItemFromDB.setNumber(num);
             cartItemFromDB.setSum(cartItemFromDB.getProduct()
-                    .getNowPrice().subtract(new BigDecimal(num)));
+                    .getNowPrice().multiply(new BigDecimal(num)));
             cartItemService.update(cartItemFromDB);
             msg = "success";
         }
